@@ -7,6 +7,8 @@ class CheckPasswordTests(unittest.TestCase):
     
     def test_length_too_short(self):
         self.assertFalse(check_pwd("Pass1!"))
+    def test_length_too_long(self):
+        self.assertTrue(check_pwd("ThisIsAVeryLongPassword123!"))
     
 
 if __name__ == "__main__":
