@@ -11,6 +11,9 @@ class CheckPasswordTests(unittest.TestCase):
     #     self.assertTrue(check_pwd("ThisIsAVeryLongPassword123!"))
     def test_second_length_too_long(self):
         self.assertFalse(check_pwd("ThisIsAVeryLongPassword123!"))
+    def test_fail_on_all_uppercase_present(self):
+        self.assertFalse(check_pwd("password1!"))
+        
     
 
 if __name__ == "__main__":
