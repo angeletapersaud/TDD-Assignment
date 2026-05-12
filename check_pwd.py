@@ -8,6 +8,8 @@ def check_pwd(password: str) -> bool:
 		return False
 	if not any(character.islower() for character in password):
 		return False
+	if not any(character.isupper() for character in password):
+		return False
 	return True
     
 
