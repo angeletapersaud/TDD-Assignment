@@ -15,6 +15,8 @@ class CheckPasswordTests(unittest.TestCase):
     #     self.assertFalse(check_pwd("password"))
     def test_fail_on_all_uppercase_present2(self):
         self.assertFalse(check_pwd("PASSWORD123!"))
+    def test_fail_on_all_lowercase_present(self):
+        self.assertFalse(check_pwd("password123!"))
     
 
 if __name__ == "__main__":
