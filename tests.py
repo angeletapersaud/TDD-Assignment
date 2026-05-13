@@ -21,6 +21,8 @@ class CheckPasswordTests(unittest.TestCase):
         self.assertFalse(check_pwd("Password!"))
     def test_no_symbols(self):
         self.assertFalse(check_pwd("Password123"))
+    def test_valid_password(self):
+        self.assertTrue(check_pwd("ValidPassword123!"))
 
 if __name__ == "__main__":
     unittest.main()
